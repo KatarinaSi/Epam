@@ -12,7 +12,7 @@ public class FromMinusToPlus {
         try {
             int number = in.nextInt();
             System.out.println(changeSign(number));
-        }catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Uncorrect format");
         }
     }
