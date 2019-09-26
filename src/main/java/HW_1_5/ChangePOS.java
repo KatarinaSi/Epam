@@ -22,19 +22,20 @@ public class ChangePOS {
         System.out.println("Please, enter a position value, where you want change the '1' to '0' (starting from 0): ");
         int oneToZeroPos = in.nextInt();
 
-        System.out.println("Your binary number where position " + zeroToOnePos + " changed to '1' in binary is equal to: " + printBinary(changeZeroToOne(valueInt, zeroToOnePos)));
-        System.out.println("Your binary number where position " + oneToZeroPos + " changed to '0' in binary is equal to: " + printBinary(changeOneToZero(valueInt, oneToZeroPos)));
+        Opposite opposite = new Opposite();
+        System.out.println("Your binary number where position " + zeroToOnePos + " changed to '1' in binary is equal to: " + printBinary(opposite.changeZeroToOne(valueInt, zeroToOnePos)));
+        System.out.println("Your binary number where position " + oneToZeroPos + " changed to '0' in binary is equal to: " + printBinary(opposite.changeOneToZero(valueInt, oneToZeroPos)));
     }
 
     public static String printBinary(int value) {
         return format("%8s", toBinaryString(value)).replace(' ', '0');
     }
 
-    public static int changeZeroToOne(int value, int pos) {
-        return (value | (1 << pos));
-    }
-
-    public static int changeOneToZero(int value, int pos) {
-        return (value & ~(1 << pos));
-    }
+    //    public static int changeZeroToOne(int value, int pos) {
+    //        return (value | (1 << pos));
+    //    }
+    //
+    //    public static int changeOneToZero(int value, int pos) {
+    //        return (value & ~(1 << pos));
+    //    }
 }
