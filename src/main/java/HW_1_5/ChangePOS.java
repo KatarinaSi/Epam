@@ -30,12 +30,4 @@ public class ChangePOS {
     public static String printBinary(int value) {
         return format("%8s", toBinaryString(value)).replace(' ', '0');
     }
-
-    //    public static int changeZeroToOne(int value, int pos) {
-    //        return (value | (1 << pos));
-    //    }
-    //
-    //    public static int changeOneToZero(int value, int pos) {
-    //        return (value & ~(1 << pos));
-    //    }
 }

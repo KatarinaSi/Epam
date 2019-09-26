@@ -29,7 +29,7 @@ public class Print {
         return longValue;
     }
 
-    public void print(String binaryByte, String binaryShort, String binaryInt, String binaryLong){
+    public void print(String binaryByte, String binaryShort, String binaryInt, String binaryLong) {
         BitCountService service = new BitCountService();
         System.out.println("The quantity used bits for byte = " + binaryByte + " is " + service.bitCount(byteValue, Byte.SIZE));
         System.out.println("The quantity used bits for short = " + binaryShort + " is " + service.bitCount(shortValue, Short.SIZE));
